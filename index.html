@@ -2,27 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NHL Trade Alert</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #1d1d1d;
+      color: #fff;
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+    .twitter-feed {
+      margin: 2rem auto;
+      max-width: 550px;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>NHL Trade Alert</h1>
-    <p>Team filters coming soon…</p>
+    NHL Trade Alert
   </header>
 
-  <!-- filter nav placeholder -->
-  <nav id="team-filter"></nav>
-
-  <!-- where we’ll inject the timeline -->
-  <main>
-    <div id="twitter-feed"></div>
-  </main>
-
-  <!-- 1) load X’s widget library -->
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  <!-- 2) then your script to call the factory -->
-  <script src="script.js"></script>
+  <div class="twitter-feed">
+    <a class="twitter-timeline"
+       data-width="550"
+       data-height="800"
+       data-theme="light"
+       href="https://twitter.com/nhl_trade_alert?ref_src=twsrc%5Etfw">
+       Tweets by @nhl_trade_alert
+    </a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
 </body>
 </html>
